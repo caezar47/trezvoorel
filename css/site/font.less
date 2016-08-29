@@ -1,0 +1,60 @@
+@roboto:			roboto;
+@roboto-light:		robotolight;
+@roboto-bold:		robotobold;
+@roboto-med:		robotomedium;
+@roboto-ital:		robotoitalic;
+@roboto-cons:		roboto;
+@roboto-cons-bold:	robotocondensedbold;
+@din-black:			roboto;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @roboto, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*roboto*/
+.include-custom-font(@family: @roboto, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-light, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-ital, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-med, 		@weight: normal, @style: normal);
+/*end's roboto*/
+/*roboto-cons*/
+.include-custom-font(@family: @roboto-cons-bold, @weight: normal, @style: normal);
+/*end's roboto-cons*/
+.include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+
+@icon-calendar: 	"\f100";
+@icon-close: 		"\f101";
+@icon-doc: 			"\f102";
+@icon-down: 		"\f103";
+@icon-fb: 			"\f104";
+@icon-left: 		"\f105";
+@icon-mailto: 		"\f106";
+@icon-map: 			"\f107";
+@icon-ok: 			"\f108";
+@icon-pdf: 			"\f109";
+@icon-play: 		"\f10a";
+@icon-print: 		"\f10b";
+@icon-right: 		"\f10c";
+@icon-tel: 			"\f10d";
+@icon-tw: 			"\f10e";
+@icon-user: 		"\f10f";
+@icon-vk: 			"\f110";
+@icon-xls: 			"\f111";
+@icon-yb: 			"\f112";
+
+@icon-briefcase: 	"\f113";
+@icon-business:  	"\f114";
+@icon-clock: 		"\f115";
+@icon-earth: 		"\f116";
+@icon-graph: 		"\f117";
+@icon-people: 		"\f118";
+@icon-reload: 		"\f119";
+@icon-signs: 		"\f11a";
+@icon-star: 		"\f11b";
+@icon-cancel: 		"\f11c";
