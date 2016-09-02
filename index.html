@@ -32,7 +32,7 @@
 	</head>
 	<body>	
 		<nav class="navbar navbar-site">
-	<div class="container">
+	<div class="container navbar-container">
 		<div class="navbar-site__row row">
 
 			<div class="navbar-header cols">
@@ -54,22 +54,40 @@
 
 			<div class="collapse navbar-collapse cols" id="bs-navbar-collapse">
 				<div class="row navbar-collapse-row">
-					<ul class="nav navbar-nav cols">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="/about.html">О нас</a></li>
-								<li><a href="#">Благодарности</a></li>
-								<li><a href="#">Заметки в прессе</a></li>
-							</ul>
-						</li>
-						<li><a href="/services.html">Наши проекты</a></li>
-						<li><a href="/clients.html">События</a></li>
-						<li><a href="/news.html">Новости</a></li>
-						<li><a href="/gallery.html">Фотогалерея</a></li>
-						<li><a href="/video.html">Видео</a></li>	
-						<li><a href="/contacts.html">Контакты</a></li>	
-					</ul>				
+					<div class="cols navbar-nav__cols">
+						<ul class="nav navbar-nav">
+							<li class="dropdown active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="/about.html">О нас</a></li>
+									<li><a href="#">Благодарности</a></li>
+									<li><a href="#">Заметки в прессе</a></li>
+								</ul>
+							</li>
+							<li><a href="/services.html">Наши проекты</a></li>
+							<li><a href="/clients.html">События</a></li>
+							<li><a href="/news.html">Новости</a></li>
+							<li><a href="/gallery.html">Фотогалерея</a></li>
+							<li><a href="/video.html">Видео</a></li>	
+							<li><a href="/contacts.html">Контакты</a></li>	
+						</ul>
+					</div>
+					<div class="cols navbar-soc__cols navbar-soc">
+						<a href="" target="_blank" class="icon icon-vk"></a>
+						<a href="" target="_blank" class="icon icon-ok"></a>
+						<a href="" target="_blank" class="icon icon-fb"></a>
+						<a href="" target="_blank" class="icon icon-tw"></a>
+					</div>	
+					<div class="cols navbar-search__cols">
+						<form action="/search.html" class="site-search">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Поиск по сайту">
+								<span class="input-group-btn">
+									<button type="submit" class="btn-search"></button>
+								</span>
+							</div>
+						</form>
+					</div>		
 				</div>
 			</div>
 			
