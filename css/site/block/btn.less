@@ -4,12 +4,39 @@
 	outline: none;
 	background: none;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-family: @roboto-cons-bold;
 	transition: @transition-site;
+    padding: 8px 25px;
+    font-size: @b-fs - 2px; // 13px;
+    letter-spacing: 0.7px;
 	&:focus,
 	&:hover{
 		text-decoration: none;
 	}
 	&:focus{
 		color: inherit;
+	}
+}
+.btn-line{
+	border: 3px solid;
+}
+.btn-bg{
+	padding: 11px 25px;
+}
+.btn-green{
+	border-color: @green;
+	color: @b-color;
+	&:hover{
+		background: @green;
+		color: @white;
+	}
+}
+.btn-yellow{
+	background: @yellow;
+	color: @b-color;
+	&:hover{
+		background: @yellow-dark;
+		color: @black;
 	}
 }
