@@ -4,7 +4,7 @@
 	background: @b-header-bg;
 	padding: 30px 0;
 }
-//._hs__container{width: 100%;}
+//._hs__container{width: 1550px;}
 ._hs__logotip-cols{
 	width: 45%;
 }
@@ -13,6 +13,7 @@
 }
 ._hs__event-cols{
 	width: 20%;
+	text-align: right;
 }
 
 //logotip
@@ -53,5 +54,22 @@
 	height: 100%;
 	padding-bottom: 15px;
 	align-items: flex-end;
+}
+//event
+._hs__event{
+	display: inline-block;
+	color: lighten(@black, 40%);
+	text-align: left;
+	font-family: @roboto-cons-bold;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	font-size: @b-fs - 3px; // 12px
+	margin-top: 15px;
+	transition: @transition-site;
+}
+._hs__event-num{
+	font-size: @b-fs + 20px; // 35px
+	line-height: @b-lh + 12px;// 35px;
+    letter-spacing: 1.5px
 
 }
