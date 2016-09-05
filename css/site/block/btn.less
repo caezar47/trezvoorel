@@ -6,8 +6,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: @roboto-cons-bold;
-	transition: @transition-site;
-    padding: 8px 25px;
+	transition: @transition-site;    
     font-size: @b-fs - 2px; // 13px;
     letter-spacing: 0.7px;
 	&:focus,
@@ -17,6 +16,9 @@
 	&:focus{
 		color: inherit;
 	}
+}
+.btn-base{
+	padding: 8px 25px;
 }
 .btn-line{
 	border: 3px solid;
@@ -38,5 +40,14 @@
 	&:hover{
 		background: @yellow-dark;
 		color: @black;
+	}
+}
+.btn-link{
+	border-bottom: 3px solid @green;
+	padding-bottom: 5px;
+	color: @black;
+	&:hover{
+		border-bottom-color: fadeout(@green, 100%);
+		color: @green;
 	}
 }

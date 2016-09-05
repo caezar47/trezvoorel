@@ -1,0 +1,123 @@
+body {
+	font-family: @roboto-light;
+	font-size: @b-fs;
+	line-height: @b-lh;
+	@media @media-size-xs	{font-size: @b-fs - 1px; line-height: @b-lh - 1px;}
+}
+i, em{font-family: @roboto-ital}
+b, strong{font-family: @roboto-bold}
+h1,h2,h3,h4,h5,h6{
+	color: @b-color;
+	margin: 0 0 0px;
+	font-weight: normal;
+}
+h1,h2,h3{font-family: @roboto-light; margin-bottom: 25px;}
+h4,h5,h6{font-family: @roboto-bold; margin-bottom: 15px;}
+h1{
+	@media @media-screen	{font-size: @b-fs + 17px; line-height: @b-lh + 17px;} 	// 32/40
+	@media @media-size-xs	{font-size: @b-fs + 13px; line-height: @b-lh + 13px;} 	// 28/36
+	@media @media-size-sm	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 30/38
+	@media @media-size-lg	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 30/38
+}
+h2{
+	@media @media-screen	{font-size: @b-fs + 11px; line-height: @b-lh + 11px;} 	// 26/34
+	@media @media-size-xs	{font-size: @b-fs + 7px; line-height: @b-lh + 7px;} 	// 22/30
+	@media @media-size-sm	{font-size: @b-fs + 9px; line-height: @b-lh + 9px;} 	// 24/32
+	@media @media-size-lg	{font-size: @b-fs + 9px; line-height: @b-lh + 9px;} 	// 24/32
+}
+h3{
+	@media @media-screen	{font-size: @b-fs + 7px; line-height: @b-lh + 5px;} 	// 22/26
+	@media @media-size-xs	{font-size: @b-fs + 3px; line-height: @b-lh + 1px;} 	// 18/24
+	@media @media-size-sm	{font-size: @b-fs + 3px; line-height: @b-lh + 1px;} 	// 18/24
+	@media @media-size-lg	{font-size: @b-fs + 3px; line-height: @b-lh + 1px;} 	// 18/24
+}
+h4{
+	@media @media-screen	{font-size: @b-fs + 4px; line-height: @b-lh + 2px;} 	// 19/25
+	@media @media-size-xs	{font-size: @b-fs + 1px; line-height: @b-lh - 1px;} 	// 16/22
+	@media @media-size-sm	{font-size: @b-fs + 1px; line-height: @b-lh - 1px;} 	// 16/22
+	@media @media-size-lg	{font-size: @b-fs + 1px; line-height: @b-lh - 1px;} 	// 16/22
+}
+h5{
+	@media @media-notsmart	{font-size: @b-fs; line-height: @b-lh;} 				// 15/23
+	@media @media-size-xs	{font-size: @b-fs - 1px; line-height: @b-lh - 1px;} 	// 14/22
+}
+h6{
+	@media @media-notsmart	{font-size: @b-fs - 1px; line-height: @b-lh - 1px;} 	// 14/22
+	@media @media-size-xs	{font-size: @b-fs - 2px; line-height: @b-lh - 4px;} 	// 13/19
+}
+.heading-site{
+	color: @b-color;
+	font-family: @roboto-light;
+	@media @media-screen	{font-size: @b-fs + 17px; line-height: @b-lh + 17px;} 	// 32/40
+	@media @media-size-xs	{font-size: @b-fs + 13px; line-height: @b-lh + 13px;} 	// 28/36
+	@media @media-size-sm	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 30/38
+	@media @media-size-lg	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 30/38
+}
+.heading-block{
+	color: @b-color;
+	font-family: @roboto-light;
+	@media @media-screen	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 30/38
+	@media @media-size-xs	{font-size: @b-fs + 11px; line-height: @b-lh + 11px;} 	// 28/36
+	@media @media-size-sm	{font-size: @b-fs + 13px; line-height: @b-lh + 13px;} 	// 28/36
+	@media @media-size-lg	{font-size: @b-fs + 13px; line-height: @b-lh + 13px;} 	// 28/36
+}
+.heading-slider-block{
+	padding-right: 130px;
+}
+.text-block{
+	div, p, ol, ul{
+		margin-bottom: 15px;
+	}
+	blockquote {
+		font-size: 28px;
+		line-height: 36px;
+		border-left: 0;
+		font-style: italic;
+		padding: 0;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@media @media-device{
+			font-size: 22px;
+			line-height: 30px;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		@media @media-screen{
+			margin-left: -100px;
+		}
+	}
+	div + h2,
+	p + h2,
+	ul + h2,
+	ol + h2,
+	blockquote + h2,
+	table + h2,
+	div + h3,
+	p + h3,
+	ul + h3,
+	ol + h3,
+	blockquote + h3,
+	table + h3,
+	div + h4,
+	p + h4,
+	ul + h4,
+	ol + h4,
+	blockquote + h4,
+	table + h4,
+	div + h5,
+	p + h5,
+	ul + h5,
+	ol + h5,
+	blockquote + h5,
+	table + h5{
+		padding-top: 10px;
+	}
+	.gal-site{
+		padding-top: 25px;
+   		margin-bottom: 45px;
+		div{margin-bottom: 0}
+	}
+	ul, ol{
+		li{margin-bottom: 5px;}
+	}
+}
