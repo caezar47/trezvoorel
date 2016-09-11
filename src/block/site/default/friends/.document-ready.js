@@ -1,6 +1,6 @@
-$('.event-block__owl').owlCarousel({
-	margin: 30,
-	items:3,	  
+$('.friends-block__owl').owlCarousel({
+	margin: 40,
+	items:4,	  
 	navText: [],
 	responsive:{
 	   	0:{nav: false, dots: true},

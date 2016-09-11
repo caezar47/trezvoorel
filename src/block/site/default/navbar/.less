@@ -1,7 +1,7 @@
 .navbar-site{
 	color: @b-navbar-color;
 	background: @b-navbar-bg;
-	padding: 0;
+	padding: 0; 
 }
 //.navbar-container{width: 100%;}
 .navbar-header {
@@ -28,13 +28,16 @@
 }
 .navbar-nav__cols{
 	width: 65%;
+	@media @media-size-lg{width: 60%}
 	@media @media-size-xl{width: 60%}
 }
 .navbar-soc__cols{
 	width: 15%;
+	@media @media-size-lg{width: 20%}
 }
 .navbar-search__cols{
 	width: 20%;
+	@media @media-size-lg{width: 20%}
 	@media @media-size-xl{width: 25%}
 }
 .navbar-nav{
@@ -189,7 +192,7 @@
 	}
 }
 .site-search{
-	margin-left: 32px;
+	@media @media-size-xxl{margin-left: 32px;}	
 	.form-control{
 		height: 40px;
 		background: #31a57e;
