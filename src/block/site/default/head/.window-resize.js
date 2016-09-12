@@ -16,6 +16,7 @@ var h_window = $(window).height(),
 
 if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');
+	$('._hs__btn-cols').appendTo('.navbar-collapse-row');	
 	//$('body').css("padding-top", h_navbar_fixed);
 } else {	
 	

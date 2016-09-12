@@ -63,8 +63,16 @@ h6{
 	@media @media-size-lg	{font-size: @b-fs + 13px; line-height: @b-lh + 13px;} 	// 28/36
 }
 .heading-slider-block{
-	padding-right: 130px;
-	margin-bottom: 55px;
+	@media @media-device{
+		margin-bottom: 25px;
+	}
+	@media @media-size-sm{
+		padding-right: 130px;
+	}
+	@media @media-screen{
+		padding-right: 130px;
+		margin-bottom: 55px;
+	}
 }
 .text-block{
 	div, p, ol, ul{

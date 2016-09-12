@@ -45,20 +45,34 @@
 			
 		.owl-dots {
 			position: absolute;
-			bottom: 30px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
 			left: 0px;
+			@media @media-size-xs{
+				bottom: 15px;
+			}
+			@media @media-notsmart{
+				bottom: 30px;
+			}
 		}
 		.owl-dot {
-			width: 18px;
-			height: 18px;
-			margin: 0 5px;
 			border-radius: 50%;
-			border: 3px solid @white;
 			transition: @transition-site;
+			@media @media-size-xs{
+				width: 12px;
+				height: 12px;
+				border: 2px solid @white;
+				margin: 0 8px;
+
+			}
+			@media @media-notsmart{
+				width: 18px;
+				height: 18px;
+				border: 3px solid @white;
+				margin: 0 5px;
+			}
 			&.active{
 				background: @green;
 				border-color: @green;
@@ -110,83 +124,91 @@
 /* No Js */
 .no-js .owl-carousel {display: block;}
 
-		/*custom controls*/
-		.slider-site{
-			.owl-nav{
-				div{
-					position: absolute;
-					top: 50%;    
-					transform: translateY(-50%);
+/*custom controls*/
+.slider-site{
+	.owl-controls{
+		.owl-nav{
+			div{
+				position: absolute;
+				top: 50%;    
+				transform: translateY(-50%);
+				transition: @transition-site;
+				&:before{
+					font-family: @icon;
+					display: block;
+					color: @green;
+					background: @white;
+					text-align: center;
+					font-size: 28px;
+					width: 60px;
+					line-height: 60px;
 					transition: @transition-site;
+					box-shadow: 2px 2px 5px fadeout(@black, 50%);
+				}
+				&:hover{
 					&:before{
-						font-family: @icon;
-						display: block;
-						color: @green;
-						background: @white;
-						text-align: center;
-						font-size: 28px;
-						width: 60px;
-						line-height: 60px;
-						transition: @transition-site;
-						box-shadow: 2px 2px 5px fadeout(@black, 50%);
-					}
-					&:hover{
-						&:before{
-							background: @green;
-							color: @white;
-						}
+						background: @green;
+						color: @white;
 					}
 				}
-				.owl-prev{
-					left: 50px;
-					&:before{
-						content: @icon-arrow-left;
-					}
+			}
+			.owl-prev{
+				left: 50px;
+				&:before{
+					content: @icon-arrow-left;
 				}
-				.owl-next{
-					right: 50px;
-					&:before{
-						content: @icon-arrow-right;
-					}
+			}
+			.owl-next{
+				right: 50px;
+				&:before{
+					content: @icon-arrow-right;
 				}
 			}
 		}
-		.events-block, .friends-block__owl{ 
-			.owl-nav{
-				div{
-					position: absolute;
-					top: -95px;    
+	}
+}
+.events-block, .friends-block__owl{ 
+	.owl-controls{
+		.owl-nav{
+			div{
+				position: absolute;
+				top: -95px;    
+				transition: @transition-site;
+				@media @media-size-sm{top: -65px;}
+				&:before{
+					font-family: @icon;
+					display: block;
+					color: @black;
+					background: @white-dark;
+					text-align: center;
+					font-size: 16px;
+					width: 42px;
+					border-radius: 50%;
+					line-height: 42px;
 					transition: @transition-site;
-					&:before{
-						font-family: @icon;
-						display: block;
-						color: @black;
-						background: @white-dark;
-						text-align: center;
-						font-size: 16px;
-						width: 42px;
-						border-radius: 50%;
-						line-height: 42px;
-						transition: @transition-site;
-					}
-					&:hover{
-						&:before{
-							background: @green;
-							color: @white;
-						}
-					}
 				}
-				.owl-prev{
-					right: 55px;
+				&:hover{
 					&:before{
-						content: @icon-back;
-					}
-				}
-				.owl-next{
-					right: 0px;
-					&:before{
-						content: @icon-next;
+						background: @green;
+						color: @white;
 					}
 				}
 			}
-		} 
+			.owl-prev{
+				right: 55px;
+				&:before{
+					content: @icon-back;
+				}
+			}
+			.owl-next{
+				right: 0px;
+				&:before{
+					content: @icon-next;
+				}
+			}
+		}
+		.owl-dot {
+			border-color: @green;
+		}
+	} 
+}

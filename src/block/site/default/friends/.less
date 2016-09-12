@@ -3,12 +3,13 @@
 	padding: 35px 0 80px;
 	position: relative;
 	background: @white;
+	@media @media-device{padding: 35px 0;}
 }
 .friends-block__owl{
 	position: relative;
 }
 ._fb__owl-item{
-
+	@media @media-size-xs{margin-bottom: 40px;}
 }
 .friends-item{}
 .friends-item__inner{
@@ -19,26 +20,28 @@
     max-height: 168px;
     border: 4px solid @white-dark;
     background: #2f2f2f;
-    &:hover{
-		.friends-item__preview{
-			img{
-				opacity: 0.7;
-				transform: scale3d(1,1,1);
-				transition-delay: 0.15s;
+    @media @media-screen{
+	    &:hover{
+			.friends-item__preview{
+				img{
+					opacity: 0.7;
+					transform: scale3d(1,1,1);
+					transition-delay: 0.15s;
+				}
 			}
-		}
-		.friends-item__note{ 
-		    &::before,&::after {
+			.friends-item__note{ 
+			    &::before,&::after {
+					opacity: 1;
+					transform: scale(1);
+					transition-delay: 0.15s;
+				}
+			}
+			.friends-item__heading{	
 				opacity: 1;
-				transform: scale(1);
 				transition-delay: 0.15s;
-			}
-		}
-		.friends-item__heading{	
-			opacity: 1;
-			transition-delay: 0.15s;
-		} 
-    }
+			} 
+	    }
+	}
 }
 .friends-item__preview{
 	img{
@@ -47,7 +50,9 @@
 	    min-height: 100%;
 	    max-width: 100%;
 		transition: transform 0.35s, opacity 0.35s;
-		transform: scale3d(1.03,1.03,1);
+		@media @media-screen{
+			transform: scale3d(1.03,1.03,1);
+		}
 	}
 }
 .friends-item__note{  
@@ -98,124 +103,3 @@
     	line-height: @b-lh - 1px; //22px
     }
 } 
-
-
-/*---------------*/
-/***** Layla *****/
-/*---------------*/
-
-figure.effect-layla {
-    position: relative;
-    overflow: hidden;
-    margin: 10px 1%;
-    min-width: 320px;
-    max-width: 320px;
-    max-height: 160px;
-    text-align: center;
-    cursor: pointer;
-
-	background: #18a367;
-}
-
-figure.effect-layla img {
-	max-height: 160px;
-	transform: translate3d(0,-30px,0);
-}
-
-figure.effect-layla figcaption {
-	padding: 3em;    
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after {
-	position: absolute;
-	content: '';
-	opacity: 0;
-}
-
-figure.effect-layla figcaption::before {
-	top: 50px;
-	right: 30px;
-	bottom: 50px;
-	left: 30px;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
-}
-
-figure.effect-layla figcaption::after {
-	top: 30px;
-	right: 50px;
-	bottom: 30px;
-	left: 50px;
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
-	-webkit-transform: scale(1,0);
-	transform: scale(1,0);
-	-webkit-transform-origin: 100% 0;
-	transform-origin: 100% 0;
-}
-
-figure.effect-layla h2 {
-	padding-top: 26%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-}
-
-figure.effect-layla p {
-	padding: 0.5em 2em;
-	text-transform: none;
-	opacity: 0;
-	-webkit-transform: translate3d(0,-10px,0);
-	transform: translate3d(0,-10px,0);
-}
-
-figure.effect-layla img,
-figure.effect-layla h2 {
-	-webkit-transform: translate3d(0,-30px,0);
-	transform: translate3d(0,-30px,0);
-}
-
-figure.effect-layla img,
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after,
-figure.effect-layla p {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-layla:hover img {
-	opacity: 0.7;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-layla:hover figcaption::before,
-figure.effect-layla:hover figcaption::after {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-layla:hover figcaption::after,
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p,
-figure.effect-layla:hover img {
-	-webkit-transition-delay: 0.15s;
-	transition-delay: 0.15s;
-}
