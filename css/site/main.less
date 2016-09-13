@@ -25,6 +25,118 @@ a{
 		}
 	}
 }
+.content-site{
+	padding: 30px 0;
+}
+.breadcrumb-block{
+	list-style: none;
+	font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    color: @b-bred;
+    margin-left: 0;
+	li{
+		display: inline-block;
+		margin-bottom: 5px;
+		& + li{
+			&:before{
+				font-family: @icon;
+				content: @icon-next;
+				display: inline-block;
+				margin: 0 15px 0 10px;
+				vertical-align: middle;
+				font-size: 6px;
+    			color: @black;
+			}
+		}
+		a{
+			color: @b-bred;
+			text-decoration: none;
+			transition: @transition-site;
+			&:hover{
+				color: @green;
+			}
+		}
+		&.active{
+			&, & > a{
+				color: lighten(@black, 60%);
+			}
+		}
+	}
+
+}
+.pagination-block{
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	@media @media-size-xs{
+		display: flex;
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	li{
+		display: inline-block;
+		@media @media-size-xs{
+			display: none;
+			width: 50%;
+			padding-right: 10px;
+			padding-left: 10px;
+			&:first-child,
+			&:last-child{display: block;}
+		}
+		a{
+			display: block;
+			width: 29px;
+			text-align: center;
+			border: 1px solid lighten(@black, 80%);
+			text-decoration: none;
+			color: @black;
+			transition: @transition-site;
+			line-height: 27px;
+			margin: 0 6px 10px;
+			@media @media-size-xs{
+				display: none;
+			}
+			&:hover{
+				color: @white;
+				background: @green;
+				border-color: @green;
+			}
+			&.active{
+				color: @white;
+				background: @green;
+				border-color: @green;
+				cursor: default;
+			}
+			&._paginb__btn{
+				width: auto;
+				padding: 0 15px;
+				@media @media-size-xs{
+					display: block;
+					margin: 0 0 5px;
+				}
+				&.first{
+					&:before{
+						font-family: @icon;
+						content: @icon-back;
+						display: inline-block;
+						font-size: 10px;
+						margin-right: 10px;
+					}
+				}
+				&.last{
+					&:after{
+						font-family: @icon;
+						content: @icon-next;
+						display: inline-block;
+						font-size: 10px;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
 /*
 .body-inner{
 	width: 100%;

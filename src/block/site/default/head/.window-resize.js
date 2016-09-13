@@ -8,7 +8,7 @@ var h_window = $(window).height(),
 	h_header = $('.header-site').outerHeight(true),
 
 	h_footer = $('.footer-site').outerHeight(true),//+
- 	h_resize = h_window - h_navbar - h_footer, //+
+ 	h_resize = h_window - h_navbar - h_header - h_footer, //+
 
  	h_resize_map = h_window - h_header - 50,
  	h_resize_xs = h_window;
@@ -26,7 +26,7 @@ if (device.mobile()) {
 	$('._sspc__bg-text').appendTo('._sspc__cols._director ._inner');
 
 } else {
-	$('.content-site.second').css("min-height", h_resize);
+	$('.content-site').css("min-height", h_resize);
 }
 
 $("nav.navbar-fixed-top").autoHidingNavbar(); 
