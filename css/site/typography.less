@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0 0 0px;
 	font-weight: normal;
 }
-h1,h2,h3{font-family: @roboto-light; margin-bottom: 25px;}
+h1,h2,h3{font-family: @roboto-light; margin-bottom: 20px;}
 h4,h5,h6{font-family: @roboto-bold; margin-bottom: 15px;}
 h1{
 	@media @media-screen	{font-size: @b-fs + 17px; line-height: @b-lh + 17px;} 	// 32/40
@@ -74,6 +74,11 @@ h6{
 		margin-bottom: 55px;
 	}
 }
+.news-content{
+	.text-block{
+		//max-width: 970px;
+	}
+}
 .text-block{
 	div, p, ol, ul{
 		margin-bottom: 15px;
@@ -123,11 +128,18 @@ h6{
 		padding-top: 10px;
 	}
 	.gal-site{
-		padding-top: 25px;
-   		margin-bottom: 45px;
+   		margin-bottom: 25px;
 		div{margin-bottom: 0}
 	}
 	ul, ol{
 		li{margin-bottom: 5px;}
+	}
+	.video-box{}
+	iframe{
+		border: none;
+		width: 100%;
+		max-width: 450px;
+		height: 350px;
+		@media @media-size-xs{height: 250px;}
 	}
 }

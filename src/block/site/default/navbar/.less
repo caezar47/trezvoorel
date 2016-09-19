@@ -135,7 +135,7 @@
 				padding: 0;
 				background: @b-navbar-bg;
 				@media @media-device{padding: 15px 0;}
-				@media @media-screen{transform: translateY(15px);}
+				//@media @media-screen{transform: translateY(15px);}
 				>li {
 					@media @media-device{
 						margin-bottom: 10px; 
@@ -156,14 +156,14 @@
 							border-bottom: 2px solid fadeout(@white, 100%);
 						}
 						&:hover{
-							background: fadeout(@black, 100%);
+							background: fadeout(@black, 80%);
 						}
 					}
 					&.active{
 						> a{
-							background: fadeout(@black, 100%);
+							background: fadeout(@black, 90%);
 							cursor: default;
-							border-bottom: 2px solid fadeout(@white, 0%);
+							//border-bottom: 2px solid fadeout(@white, 0%);
 						}
 					}
 				}

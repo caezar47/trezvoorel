@@ -1,5 +1,4 @@
 $('img').addClass('img-responsive');
-$('.text-block ul').addClass('ul-site');
 var url = window.location.pathname;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('._fs__navbar a[href="'+url+'"]').parent().addClass('active'); 
@@ -17,23 +16,32 @@ $('._sppc__item').hover(
 		$(this).removeClass('active');
 	}
 );
-$('iframe').removeAttr("frameborder");
+
+//text block
+$('iframe').removeAttr("frameborder").removeAttr("width").removeAttr("height");
+$('.text-block iframe').parent().addClass("video-box");
+$('.text-block ul').addClass('ul-site');
+
 $('#getModal').click(function(){
 	$('#modal-enter').modal('hide');
 	setTimeout(function() {$('#modal-pass').modal('show');}, 500)
 	return false;
 });
-$('._apc__slider').owlCarousel({
+$('.gal-site').addClass("owl-carousel").owlCarousel({
 	margin: 35,
 	navText: [],
 	nav: true,
 	dots: false,
 	responsive:{
 	   	0:{
-			items:1
+			items:1,
+			nav: false,
+			dots: true,
 	   	},
-	   	400:{
-			items:2
+	   	500:{
+			items:2,
+			nav: false,
+			dots: true,
 	   	},
 	   	768:{
 			items:3
@@ -42,19 +50,6 @@ $('._apc__slider').owlCarousel({
 			items:4
 	   	}
 	} 
-}); 
-$('.gal-site').owlCarousel({
-	margin: 0,
-	loop: true,
-	items:1,
-	dots: true,
-	navText: [],
-	autoplay:true,
-	autoplayTimeout:10000,
-	responsive:{
-	   	0:{nav: false},
-	   	768:{nav: true}
-	}
 }); 
 $('.fancybox').fancybox();
 // конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
